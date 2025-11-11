@@ -17,6 +17,11 @@ app.use((req, res, next) => {
   next();
 });
 
+// Ruta raíz para verificar que el servidor está activo
+app.get("/", (req, res) => {
+  res.send("🚀 Maestro Constructor API funcionando correctamente desde Render.");
+});
+
 // Endpoint de prueba
 app.get("/listarArchivos", (req, res) => {
   res.json({
